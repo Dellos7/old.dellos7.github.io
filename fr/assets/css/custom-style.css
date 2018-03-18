@@ -78,18 +78,14 @@
     display: inline-block;
 }
 
-.cv-profile-pic-section {
-    text-align: center;
-}
-
 .cv-profile-pic {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     border: 1px solid white;
     /*position: absolute;*/
-    right: 10%;
     top: 5%;
+    float: right;
 }
 
 .cv-pdf-download {
@@ -115,5 +111,6 @@
         height: 100px;
         position: relative;
         right: unset;
+        float: unset;
     }
 }

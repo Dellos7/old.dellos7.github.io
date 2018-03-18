@@ -78,6 +78,10 @@
     display: inline-block;
 }
 
+.cv-profile-pic-section {
+    text-align: center;
+}
+
 .cv-profile-pic {
     width: 150px;
     height: 150px;

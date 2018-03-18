@@ -77,3 +77,39 @@
     color: white;
     display: inline-block;
 }
+
+.cv-profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid white;
+    position: absolute;
+    right: 10%;
+    top: 5%;
+}
+
+.cv-pdf-download {
+    position: sticky;
+    top: 0;
+    background-color: rgba(28, 103, 136, 0.6);
+    padding: 1%;
+    text-align: center;
+    transition: background-color 1s;
+}
+
+.cv-pdf-download > a {
+    color: white;
+}
+
+.cv-pdf-download:hover {
+    background-color: rgba(28, 103, 136, 1);
+}
+
+@media only screen and (max-width: 768px) {
+    .cv-profile-pic {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        right: unset;
+    }
+}

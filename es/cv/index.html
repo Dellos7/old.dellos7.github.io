@@ -11,11 +11,11 @@
 <meta property="og:locale" content="es">
 <meta name="description" content="Programmer, Web &amp; App developer, IT lover">
 <meta property="og:description" content="Programmer, Web &amp; App developer, IT lover">
-<link rel="canonical" href="http://localhost:4000/es/cv/">
-<meta property="og:url" content="http://localhost:4000/es/cv/">
+<link rel="canonical" href="http://0.0.0.0:4000/es/cv/">
+<meta property="og:url" content="http://0.0.0.0:4000/es/cv/">
 <meta property="og:site_name" content="David López Castellote">
 <script type="application/ld+json">
-{"description":"Programmer, Web &amp; App developer, IT lover","@type":"WebPage","url":"http://localhost:4000/es/cv/","headline":"David López Castellote","@context":"http://schema.org"}</script>
+{"description":"Programmer, Web &amp; App developer, IT lover","@type":"WebPage","url":"http://0.0.0.0:4000/es/cv/","headline":"David López Castellote","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,7 +27,8 @@
 
 <section class="main-content">
     <span class="cv-pdf-download">
-        <img class="emoji" title=":arrow_down:" alt=":arrow_down:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2b07.png" height="20" width="20"> <a href="https://dhtml2pdf.herokuapp.com/api.php?url=https://dellos7.github.io/es/cv/&amp;result_type=show" target="_blank">Descargar en PDF</a>
+      <a href="../"><img class="emoji" title=":arrow_backward:" alt=":arrow_backward:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25c0.png" height="20" width="20"> Volver</a>
+      <a href="javascript:window.open('https://dhtml2pdf.herokuapp.com/api.php?url='+window.location.href+'&amp;result_type=show',%20'_blank')" target="_blank"><img class="emoji" title=":arrow_down:" alt=":arrow_down:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2b07.png" height="20" width="20"> Descargar en PDF</a>
     </span>
     <section class="cv-profile-pic-section">
         <img class="cv-profile-pic" src="/es/assets/imgs/david.png">
@@ -154,9 +155,11 @@ web y móvil”</em> por la <em>Universitat Jaume I</em>.</p>
         if( cvPdfDownloadArr && cvPdfDownloadArr[0] ) {
             var cvPdfDownloadEl = cvPdfDownloadArr[0];
             cvPdfDownloadEl.style.display = 'none';
-            document.addEventListener( 'mouseover', function() {
+            var showDownloadPdfFn = function() {
                 cvPdfDownloadEl.style.display = 'block';
-            });
+            };
+            document.addEventListener( "touchstart", showDownloadPdfFn );
+            document.addEventListener( "mouseover", showDownloadPdfFn );
         }
     })();
 </script></html>

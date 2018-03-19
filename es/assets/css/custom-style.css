@@ -90,11 +90,12 @@
 
 .cv-pdf-download {
     position: sticky;
+    position: -webkit-sticky; /* Safari */
     top: 0;
     background-color: rgba(28, 103, 136, 0.6);
     padding: 1%;
-    text-align: center;
     transition: background-color 1s;
+    text-align: center;
 }
 
 .cv-pdf-download > a {
